@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /admin77
+Disallow: /blocks
+Disallow: /libs
+Disallow: /tmp
+Disallow: /webstat
+Disallow: /config.php
+Disallow: /init.php

@@ -1,0 +1,429 @@
+#calc-tab .portfolio-cats a{ font-size:17px; line-height:20px; padding:15px 40px; font-weight:bold;}
+#calc-tab .portfolio-cats a div {font-size: 80%; padding-top:5px;}
+#calc-tab .portfolio-cats li{margin-left: 2px;margin-right:2px;}
+
+
+.calculator-main{float:left;width: 100%;margin: 25px 0;padding: 0px;box-sizing: border-box;min-height: 500px;}
+.calculator-left{width: 75%;float:left;}
+.calculator-right{width: 24%;float:right;background: #ffecb9;}
+
+.calculator-cat1 {
+    background: #454F5A;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 13px;
+    color: #fff;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+}
+.calculator-cat1 .click-blcok{position: absolute;top:0px;left:0px;width: 100%;height: 100%;z-index: 2;cursor: pointer;}
+.calculator-cat1 .cat-itog{float:right;font-size: 14px;}
+.calculator-cat1 .cat-itog span{font-size: 16px;}
+.calculator-cat1 .label{float:right;font-size: 14px;margin-left: 15px;position: relative;z-index: 3;}
+
+.calcslideinner{float:left;font-size: 18px; line-height:18px;cursor: pointer;position: relative;padding-left: 25px;}
+.calcslideinner:before{
+    content: '\25BC';
+    position: absolute;
+    left:0px;
+    top:50%;
+    font-size:14px;
+    color:#fff;
+    margin-top: -7px;
+    text-transform:lowercase;
+}
+
+.calcslideinner.rotate:before{    transform: rotate(180deg);  animation: rotate 2s linear infinite;}
+.calculator-cat-inner{float:left;width: 100%;}
+.val-coast{margin-left: 15px;color:#29b17c; float: left; font-size:80%; font-weight:bold;}
+.calculator-content{float:left;background:#f5f5f5;width: 100%;padding: 0 20px 20px 20px;box-sizing: border-box;display: none; }
+.calculator-form{width: 100%;padding: 0px 0px;box-sizing: border-box;float:left;margin-top: 0px;}
+.calculator-form .block-map-form{width: 100%;background: #fff; padding:25px 0 0 0;}
+.calculator-form .block-map-form .inner{padding: 0px;}
+.calculator-form .formname{/*background: #f5f5f5;*/font-size: 26px; padding:13px 0;}
+.calculator-form .formname span div{font-size: 14px; line-height:18px; margin-top:5px;}
+.calculator-form .block-map-form .zayavka .input-file.sendorder {width:200px;}
+
+
+.calculator-main .portfolio-cats.list {margin-top:15px; text-align:left;}
+.calculator-cat2{font-size: 22px;line-height:1.15;
+    font-weight: bold;position: relative;margin-bottom:0px;margin-top: 30px;float:left;width: 100%; color:#29b17c;}
+.calculator-cat2:first-child{margin-top: 0px;}
+.calculator-cat2:before{content: '';position: absolute;left:0px;bottom: -8px;width:80px;height: 2px;background:#29b17c; }
+.calculator-item{float:left;width: 100%;font-size: 16px;font-weight: bold;line-height: 20px;}
+.calculator-item span{float:left;}
+.tooltip-1{width:25px;height: 20px;background: url(images/tooltip-1.png) center no-repeat;float:left;margin-left: 15px;cursor:pointer; position: relative;}
+
+.calculator-right .content{padding: 15px;}
+.calculator-right .content .form{float:left;}
+.calculator-right .title{margin: 0px;float:left;width: 100%;font-size: 20px;font-weight: bold;text-align: left;margin-bottom: 10px; }
+.calculator-right .title:after{margin: 0px 0px;}
+.calculator-right .title_span {font-size:14px; font-weight:bold; margin-bottom:5px;}
+.calculator-right .title_span span {font-size:12px; font-weight:normal;}
+
+.calculator-right .calc-itog{float:left;width: 100%;font-size: 19px;line-height: 32px;margin-top: 10px;margin-bottom: 15px;font-weight: bold;}
+
+.calculator-right .right_button{ float:left; width: 100%; color:#fff; background: #31b380; color:#fff;font-size: 16px; padding:7px 0; text-align:center; cursor:pointer; margin-bottom:20px;}
+.calculator-right .right_button span{ font-size:12px; opacity:0.8}
+
+.calculator-right .info{float:left;width: 100%;font-size: 13px;margin: 15px 0px;line-height: 17px;}
+.calculator-right .info b{background: url(images/info-calc.png) right no-repeat;padding-right: 60px;}
+
+
+.calc-dopitems{margin-top: 5px;margin-bottom: 7px;padding-left: 25px;font-size: 13px;}
+.calc-dopitems label{margin-right: 25px;}
+
+.calculator-cat1 .calc-checkbox1:not(checked) + label::before{top:0px;}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    text-align: left;
+    background-color: #454F5A;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -40%;
+    left: 125%;
+    font-weight: normal;
+    font-size: 12px;
+	line-height:14px;
+	min-width:125px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.4s;
+	cursor:text;
+}
+.widetoolips .tooltip .tooltiptext { min-width:450px;}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #2a2f36 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip .tooltiptext ul {list-style:disc;}
+.tooltip .tooltiptext ul li {margin-bottom:5px; margin-left:20px;}
+
+
+
+.calculator-value{font-size: 14px;line-height: 20px;margin-top: 7px;float:left;width: 100%;}
+.calculator-value .calc-number{float:left;margin-left: 15px;width: 37px;padding:0px 0px 0px 2px;border: 1px solid #ddd;}
+
+
+/********************************************************/
+/********************************************************/
+/********************************************************/
+/********************************************************/
+/********************************************************/
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.calc-checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.calc-checkbox + label {
+    cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.calc-checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.calc-checkbox:not(checked) + label {
+    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+    padding: 0 0 0 30px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.calc-checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+   background: url(images/check-1.png) top left no-repeat;
+    width: 25px;height: 24px;
+    left:0px;
+    top:2px;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.calc-checkbox:checked + label:before {
+    background: url(images/check-1.png) bottom 1px left no-repeat;
+
+}
+
+
+
+
+/*********RADIO ЗНАЧЕНИЯ********/
+
+.calc-radio1 {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0 3px 0 0;
+}
+.calc-radio1 + label {
+    cursor: pointer;
+}
+.calc-radio1:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.calc-radio1:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 25px;
+    float:left;
+}
+.calc-radio1:not(checked) + label:after {
+
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 19px;
+    height: 19px;
+    background: url(images/radio-1.png) bottom no-repeat;
+}
+
+.calc-radio1:checked + label:after {
+    background: url(images/radio-1.png) top no-repeat;
+}
+.calc-radio1:focus + label:before {
+}
+
+
+
+
+
+
+
+
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.calc-checkbox1 {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.calc-checkbox1 + label {
+    cursor: pointer;
+    float:left;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.calc-checkbox1:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.calc-checkbox1:not(checked) + label {
+    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+    padding: 0 0 0 25px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.calc-checkbox1:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 19px;
+    height: 19px;;
+    background: url(images/check-2.png) bottom no-repeat;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.calc-checkbox1:checked + label:before {
+    background: url(images/check-2.png) top no-repeat;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.calc-checkbox1:checked + label:after {
+    left: 26px;
+}
+/* Показываем получение фокуса. */
+.calc-checkbox1:focus + label:before {
+}
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+.radio2-calc {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0 3px 0 0;
+}
+.radio2-calc + label {
+    cursor: pointer;
+}
+.radio2-calc:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.radio2-calc:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 25px;
+    font-size: 13px;
+    
+    float:left;
+    margin-bottom: 5px;
+}
+
+.radio2-calc:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 16px;
+    height: 16px;
+    background: url(images/radio-2.png) bottom no-repeat;
+
+}
+.radio2-calc:checked + label:after {
+    background: url(images/radio-2.png) top no-repeat;
+
+}
+
+
+@media screen and (max-width: 1250px) {
+    .calculator-main{padding: 0px;}
+
+}
+@media screen and (max-width: 1150px) {
+
+}
+@media screen and (max-width: 800px) {
+    .calculator-mainhidden .calculator-right, .calculator-right #changetab {display: none;}
+	.calculator-content {padding:15px;}
+    .calculator-left{width: 100%;padding-bottom: 100px;}
+    .calculator-right{width: 100%;position: fixed;bottom:0px;right:0px;top:auto!important; z-index:5; box-shadow: 0px 0px 10px #2a2f36;}
+	.calculator-right .content {padding:7px;}
+    .calculator-right .info{display: none;}
+    .calculator-right .title{float:left;width: 100%; background:#FFECB9}
+	.calculator-right .title_span {background:#FFECB9}
+    .calculator-right .form{float:left;width: 100%;clear: left}
+	
+	
+    /*.calculator-right .calc-itog{float:right;width: 45%;min-width:80px;margin-top: 0px;margin-bottom: 10px; text-align: right;}
+	.calculator-right .calc-itog .itog-1 {margin-bottom:10px;}
+    .adp-left{float:left;width: 55%;margin-bottom: 10px;}*/
+	
+	.adp-left{float:left;/*width: 55%;*/width: 100%;margin-bottom: 0px; display:none}
+	.calculator-right .calc-itog{float:left;width: 50%;min-width:80px;margin-top: 0px;margin-bottom: 10px; text-align: left;}
+	.calculator-right .calc-itog .itog-1 {margin-bottom:0px;}
+	.calculator-right .right_button {float:right; width:50%; margin-bottom:0;}
+	
+	
+	
+	
+	
+    .calculator-main{overflow: hidden;}
+	
+	.radio2-calc:not(checked) + label {width:100%; margin-bottom: 3px;}
+	.calculator-value { font-size:13px;}
+	
+	.calculator-cat1 { padding:10px;}
+	.calcslideinner {font-size:16px;}
+	
+	.calculator-cat1 .cat-itog {font-size:13px;}
+	.calculator-cat1 .cat-itog span{font-size: 14px;}
+	
+	.calculator-cat2 {font-size:20px;}
+	.calculator-right .title, .calculator-right .title_span{ display:none;}
+}
+@media screen and (max-width: 480px) {
+	.calculator-right .calc-itog{font-size:16px; line-height:18px;}
+	.radio2-calc:not(checked) + label {margin-bottom: 0px; height:19px; overflow:hidden;}
+.calculator-content {padding:0 15px 0 2px;}
+.calculator-value, .calc-dopitems { font-size:12px !important;}
+.calculator-cat2 {font-size:18px;}
+.calculator-value .calc-number, .val-coast {margin-left:5px;}
+.calculator-right .form {overflow:hidden;}
+.calculator-cat1 .label, .calculator-cat1 .cat-itog {display:none;}
+#calc-tab .portfolio-cats a {padding:7px 15px; font-size:14px;}
+}
+
+
+
+
+.titlecalc {font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;    margin-top: 20px;}
+
+.main-block-item{float:left;width: 100%;margin-bottom: 10px;margin-top: 20px;}
+.no-margin-bottom{margin-bottom: 0px;}
+.no-margin-all{margin: 0px;}
+.control-item{float:left;margin-left: 10px;font-size: 11px;line-height: 24px;}
+.control-item .action-2{/*color:#29b17c*/}
+.control-item .action-3, .control-item .action-1{color:#919B9C;}
+.text-count-calc{float:left;margin-left: 5px;font-size: 12px;}
+.calc-dopitems .val-coast{float: right;}
+
+
+
+
+.page-services .calculator-main .portfolio-cats.list, .page-services .calculator-mainhidden .portfolio-cats.list {display:none; margin-top:20px;}
+
+.calculator-mainhidden{position: relative;height: 385px;overflow: hidden;}
+.calculator-mainhidden .calculator-bg{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+87&0+0,1+72 */
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 87%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 72%,rgba(255,255,255,1) 87%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 72%,rgba(255,255,255,1) 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	position: absolute;width: 100%;height: 100%;left:0px;top:0px;z-index: 1;}
+.calculator-mainhidden .show-calc{position: absolute;bottom: 30px;width:100%;text-align: center;}
+.calculator-mainhidden .show-calc .button{display: inline-block;/*background: #5988BD;color:#fff;*/font-size: 18px;padding: 15px 45px;}
+
+.header_hidden_calc {border: 2px solid #31b380; border-bottom:none; background: url(/images/elements/4icons-im/calc_button.png) no-repeat left 20px center #FBFBFB; padding:20px 20px 20px 100px; font-size:30px; line-height:36px; color:#31b380}
+.header_hidden_calc div {margin-bottom:5px;}
+.header_hidden_calc span {font-size:20px; line-height:22px; color:#2a2f36}
+
+.calculator-mainhidden {border: 2px solid #31b380; border-top:none; background:#FBFBFB}
+.calculator-mainhidden .calculator-cat1 {background:#31b380}
+
+.calc_tit {margin-bottom:0; margin-bottom:-20px;}
+.calc_tit, .calc_tit_small { color:#29b17c;}
+.calc_tit:after { visibility:hidden;}
+
+
+.boldpunkt { font-weight:bold; font-size:16px; background:#FFECB9; padding:9px 20px 10px 40px !important; border-radius:15px;}
+.boldpunkt:before{top:7px !important; left:15px !important;}
+
+#changetab{float:left;width: 100%;margin: 20px 0px;font-size: 18px;}
+
+
+
+#changetab .calc-checkbox1:not(checked) + label::before{top:0px;}
+
+.calculator-right #changetab {margin:0;}
+.calculator-right #changetab .boldpunkt { font-size:14px; padding:10px 0px 10px 27px !important;}
+.calculator-right #changetab .boldpunkt:before {left:0 !important;}

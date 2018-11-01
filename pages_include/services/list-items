@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="inner">
+
+        <h1 class="title"><?
+            if($Page["h1"]):
+                echo $Page["h1"];
+            else:
+                echo $Page["title"];
+            endif;
+            ?></h1>
+
+
+        <? if ($Items): ?>
+        <? foreach ($Items as $Item):
+
+                if($Item["name"])
+                    $title = $Item["name"];
+                else
+                    $title = $Item["title"];
+
+                ?>
+        <div class="catalog1">
+            <div class="catalog1-title"><a
+                    href="/<?= GetPathService($Item["cat"]) ?>/<?= $Item["url"]; ?>"><?= $title; ?></a>
+            </div>
+            <div class="catalog1-image"><a href="/<?= GetPathService($Item["cat"]) ?>/<?= $Item["url"]; ?>"><img
+                        src="/<?= $Item["image"]; ?>"/></a></div>
+            <div class="catalog1-desc"><?= $Item["desc"]; ?></div>
+            <? if ($Item["coast"]) { ?>
+                <div class="catalog1-coast">Цена: <?= $Item["coast"]; ?> <span>руб.</span>
+                </div><? } ?>
+
+            <div class="catalog1-buttons">
+                                    <span class="catalog1-more"><a
+                                            href="/<?= GetPathService($Item["cat"]) ?>/<?= $Item["url"]; ?>">Подробнее</a></span>
+                <? if ($Item["coast"]) { ?>
+                <span class="catalog1-buy" onclick="BuyProduct1(<?= $Item["id"]; ?>,$(this));">
+                        Купить</span><? } ?>
+            </div>
+
+        </div>
+
+
+    <? endforeach; ?>
+    <? endif; ?>
+    </div>
+</div>

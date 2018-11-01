@@ -1,0 +1,1 @@
+<font class="err">[#res_err]</font>

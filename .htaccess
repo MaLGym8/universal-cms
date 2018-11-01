@@ -1,0 +1,43 @@
+SetEnvIfNoCase User-Agent "^Googlebot" search_bot
+SetEnvIfNoCase User-Agent "^Yandex" search_bot
+SetEnvIfNoCase User-Agent "^Yahoo" search_bot
+SetEnvIfNoCase User-Agent "^Aport" search_bot
+SetEnvIfNoCase User-Agent "^msnbot" search_bot
+SetEnvIfNoCase User-Agent "^spider" search_bot
+SetEnvIfNoCase User-Agent "^Robot" search_bot
+SetEnvIfNoCase User-Agent "^php" search_bot
+SetEnvIfNoCase User-Agent "^Mail" search_bot
+SetEnvIfNoCase User-Agent "^bot" search_bot
+SetEnvIfNoCase User-Agent "^igdeSpyder" search_bot
+SetEnvIfNoCase User-Agent "^Snapbot" search_bot
+SetEnvIfNoCase User-Agent "^WordPress" search_bot
+SetEnvIfNoCase User-Agent "^BlogPulseLive" search_bot
+SetEnvIfNoCase User-Agent "^Parser" search_bot
+
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+# Follow symbolic links in this directory.
+Options +FollowSymLinks
+
+#RewriteCond %{HTTP_HOST} ^sale042.youinbusiness.com
+#RewriteRule (.*) http://www.sale042.youinbusiness.com/$1 [R=301,L]
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} !^/admin77(/(.*)|$)
+RewriteCond %{REQUEST_URI} !^/libs(/(.*)|$)
+RewriteRule ^(.+)/$ $1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule .* index.php [L]
+
+AddType image/jpeg  jpeg jpg jpe JPG
+AddType application/download .pdf
+AddType application/octet-stream .pdf
+AddType application/force-download  .pdf
+AddType application/download .doc
+AddType application/octet-stream .doc
+AddType application/force-download  .doc

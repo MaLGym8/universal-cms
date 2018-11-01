@@ -1,0 +1,1 @@
+<p><font color="red">[#wait_good]</font></p>

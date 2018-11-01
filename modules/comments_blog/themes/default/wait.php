@@ -1,0 +1,1 @@
+<img src="[#theme_path]wait.gif" style="float:left;"><span class="t">[#wait]</span>

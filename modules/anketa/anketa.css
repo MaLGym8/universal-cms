@@ -1,0 +1,318 @@
+.anketa_page{   padding-top: 25px;padding-bottom: 40px;
+    display: block;
+	color:#fff !important;
+	min-height:600px;
+	margin-bottom:0;
+   }
+   
+.container.anketa_page>.inner {margin-top: 150px;}
+
+
+
+#s1-title {
+    
+    font-size: 32px;
+	line-height:34px;
+    font-weight: bold;
+    color: #FFECB9;
+    text-align: center;
+    /*height: 50px;*/
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+    line-height: normal;
+}
+#s1-title-coast {
+
+    font-size: 22px;
+	line-height:24px;
+    /*color: #4daee3;*/
+    text-align: center;
+    /*height: 50px;*/
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+    line-height: normal;
+}
+
+#s1-in-aboutq {
+    
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    /*height: 25px;*/
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    line-height: normal;
+}
+#s1-in {
+    /*height: 289px;*/
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: 0px 100px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    line-height: normal;
+}
+
+#s1-in-1 {
+    height: 70px;
+    width: 100%;
+    max-width: 295px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+#s1-in-1-1 {
+    float: left;
+    height: 37px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 3px;
+    margin-right: 20px;
+    line-height: normal;
+}
+#s1-in-1-2 {
+    
+    font-size: 14px;
+    font-weight: 400;
+    /*color: #000000;*/
+    float: left;
+    height: 56px;
+    width: 220px;
+    padding-top: 24px;
+    line-height: normal;
+}
+#s1-button {
+    
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+   
+    letter-spacing: 3px;
+    text-align: center;
+    
+    width: 40%; min-width:250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    border-radius: 0px;
+    cursor: pointer;
+    webkit-animation: rainbow 2s linear 2s infinite;
+    animation: rainbow 2s linear 2s infinite;
+    /*padding-left: 90px;*/
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.5);
+    transition:all 0.3s ease;
+    transform: scale(1);
+}
+#s1-button:hover {
+    transition:all 0.3s ease;
+    transform: scale(1.05);
+}
+
+
+@keyframes rainbow {
+	0% {background: #29b17c;}
+	100% {background: #5988BD;}
+
+} 
+
+
+#s1-button-1 {
+    width: 100%;
+    float: left;
+	 background-color: #29b17c;
+	 padding:15px;
+	 animation: rainbow 2s linear 0s infinite;
+}
+#s1-button-2 {
+    background-image: url(images/gift-ico.png);
+    float: left;
+    height: 50px;
+    width: 50px;
+	 display:none;
+}
+
+.tab-anketa{display: none;}
+.tab-anketa.active{display: block;}
+
+
+.tab-anketa .main-block-item {
+    float: none;
+    margin: 0 auto;
+    width: 100%; max-width: 650px;
+}
+
+
+.tab-anketa .calculator-item {margin-top:20px;}
+.tab-anketa .calculator-item span {
+    font-size: 24px;
+	line-height:26px;
+    margin-bottom: 20px; color:#FFECB9;}
+
+
+
+
+.anketa_next_step {
+    background-color: #29b17c;
+    border-radius: 0px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.3;
+    
+    font-size: 16px;
+	font-weight:bold;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 180px;
+    float:left;
+    line-height: normal;
+	padding:10px 15px;
+}
+
+.calculator-value-anketa{float:left;width: 100%;}
+.calculator-value-anketa b{float:left;margin-right: 15px; font-size:18px; line-height:20px; margin-bottom:6px;}
+#s3-in-final {
+    width: 100%;
+    margin: 10px auto;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+    max-width: 450px; margin-top:0px;
+}
+#s3-in-final div{margin-bottom:10px;}
+
+.anketa-form{background: none;}
+.anketa-form .zayavka{border:1px solid  #d5d0ce;}
+
+.calculator-value-anketa b span {font-size:80%; font-weight:normal;}
+
+
+
+
+
+
+
+
+
+.anketa .dop-quest label{width: 250px;}
+.anketa .dop-quest input[type="text"]{border: 1px solid #ddd;width: 250px;padding: 3px 5px;margin-left: 15px;}
+.anketa .calculator-cat2.anketa:before{content: none!important;}
+.anketa .calculator-cat2.anketa:after{position: absolute;right:-25px;content: "▼";color:#31b380;font-size: 18px;top:5px;}
+
+.anketa .calculator-cat2.anketa{width: auto;clear: left;margin: 25px 0px 10px 0px;}
+
+.anketa .dop-quest .main-block-item{margin-bottom: 0px;margin-top: 10px;}
+
+.anketa .main-block-item {margin-top:0px; margin-bottom:0;}
+.anketa .margin-minus-top{margin-top: 0px !important;}
+
+.anketa .calculator-value-anketa{font-size: 16px;line-height: 20px;margin-top: 15px;float:left;width: 100%;}
+.anketa .calculator-value-anketa input[type="text"]{border: 1px solid #ddd;width: 50%;padding: 3px 5px;margin-left: 5px; max-width:250px;}
+.anketa .calculator-value-anketa label{width:90%;}
+.anketa .calculator-value-anketa label span {font-size:80%;}
+
+.anketa .calculator-value-anketa.radio label {width: auto; margin-right:20px; min-height:22px;}
+
+.anketa .main-block-item.colons2 { max-width:700px;}
+
+
+.anketa .colons2left {float:left;width:45%;}
+.anketa .colons2right {float:right;width:45%;}
+
+
+.anketa .calc-checkbox1:not(checked) {
+    left: 0;
+}
+.anketa  .calc-radio1:not(checked) + label:after {top:0;}
+
+
+
+
+.anketa-back{font-size: 14px;color:#eee;float:left; width: 100%;}
+/*.tab-anketa {display:inherit !important;}*/
+
+
+.anketaceni { color:#5988BD; display:none;}
+.coast-element{font-size: 14px;color:#0ab373;}
+#anketa-coast-all{position: fixed;right:100px;top:50%;color:#fff;background: #0ab373;padding: 10px 5px;}
+
+
+#s1-title-coast span {color:#4daee3; font-size:250%;}
+
+#s1-title-coast span strong {font-size:60%;}
+
+#anketa-coast-all {display:none;}
+.coast-element {display:none;}
+
+
+
+
+.container.anketa_page .block-map-form .zayavka {background: rgba(0,0,0,0.3);}
+.container.anketa_page .anketa-form .zayavka {border:none;}
+.container.anketa_page .sendorder.input-file .fileInputText {color: #fff; opacity: 1;}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+#s1-title {font-size:20px; line-height:22px;}
+#s1-in-aboutq {font-size:14px; line-height:17px;}
+#s1-in-1-1 {font-size:16px; width:30px; height:25px; margin-right:7px;}
+
+#s1-in-1-2 {
+    font-size: 14px;
+    width: 180px;
+    padding-top: 10px;
+}
+
+#s1-button {width:200px; letter-spacing: 0px;}
+
+#s1-button-1 {padding:7px 0;}
+
+.anketa .colons2left, .anketa .colons2right { width:100%;}
+.tab-anketa .calculator-item span {margin-bottom:0;}
+
+.anketa .calculator-value-anketa {
+    font-size: 14px;
+    line-height: 18px; margin-top:10px;
+}
+#s1-in-1 {margin-bottom:0px; margin-top:0;}
+#s1-in {margin-bottom:10px;}
+
+.tab-anketa .calculator-item span {font-size:18px; line-height:20px;}
+
+.calculator-value-anketa b {
+    font-size: 16px;
+    line-height: 18px;}
+
+#s3-in-final {font-size:14px; line-height:16px;}
+
+.anketa_page{   padding:20px 0 40px 0;}
+
+.tab-anketa .calculator-item {margin-top:15px;}
+
+#s1-title-coast {font-size: 16px;}
+}
+
+#tab-anketa-8 .calculator-cat-inner{margin-bottom:15px;}

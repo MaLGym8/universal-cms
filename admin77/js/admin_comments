@@ -1,0 +1,187 @@
+$(document).ready(function(){
+
+    $(document).on("change",".upload_img",function(){
+
+        var id = $(this).attr("rew");
+        var file = "uploadimg_"+id;
+
+
+
+        $.ajaxFileUpload
+        (
+            {
+                url:'admin_action.php',
+                secureuri:false,
+                fileElementId:file,
+                dataType: 'json',
+                data:{addimgrew:id},
+                success: function (data, status)
+                {
+                    $(".img-"+id).attr("src","../files/reviews_photos/"+data.msg);
+					$(".img-"+id).parent(".reviews-photo").children(".rew-edit").children(".imgadmin").attr("id",data.msg);
+                },
+                error: function (data, status, e)
+                {
+                    $(".img-"+id).attr("src","../files/reviews_photos/"+data.msg);
+					$(".img-"+id).parent(".reviews-photo").children(".rew-edit").children(".imgadmin").attr("id",data.msg);
+                }
+            }
+        );
+
+    });
+
+
+$(document).on("click",".imgadmin",function(){
+var confirmImg = confirm("Удалить?");
+var This = $(this);
+if(confirmImg)
+{
+var img = This.attr("id");
+    var id = This.attr("rew");
+dataString = "delphotoadmin="+img;
+			$.ajax({
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{
+                    $(".img-"+id).attr("src","../images/chcomments/nophoto.png");
+				}
+			});
+}
+});
+
+$(document).ready(function(){
+$(document).on("click",".chadminsave",function(){
+    $(this).removeClass("mig");
+var This = $(this);
+
+var id = $(this).attr("value");
+var name = $(this).parent("div").parent(".lastposts").children(".info-div").children(".chadminname").val();
+var link = $(this).parent("div").parent(".lastposts").children(".info-div").children(".chadminlink").val();
+var date = $(this).parent("div").parent(".lastposts").children(".info-div").children(".chadmindate").val();
+var type = $(this).parent("div").parent(".lastposts").children(".info-div").children(".chadmintype").val();
+var cat = $(this).parent("div").parent(".lastposts").children(".info-div").children(".chadmincat").val();
+var text = $(this).parent("div").parent(".lastposts").children(".chadmintext").val();
+
+
+
+dataString = "editadmin="+id+"&name="+encodeURIComponent(name)+"&link="+encodeURIComponent(link)+"&date="+date+"&text="+encodeURIComponent(text)+"&type="+type+"&cat="+cat;
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{       
+					This.css("color","green");
+					This.addClass("opacity-1");
+					This.html("Сохранено");
+				
+				}
+			});
+	
+	
+	
+});
+
+	var posts = 10;
+	$("#chComments-Admin-Load").click(function(){
+		posts+=10;
+	dataString = "checkpostsadmin="+posts+"";
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{          
+					$("#stats_discussion").append(html);
+				}
+			});
+	
+	});
+	$(document).on("change",".chComments-Public",function(){		
+		var id = $(this).val();
+		if(!$(this).prop("checked"))
+		{
+			$(this).parent("label").css("color","red");
+			dataString = "chchangepublic=1&id="+id+"";
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{                    
+				}
+			});
+		}
+		else
+		{
+			$(this).parent("label").css("color","green");
+			dataString = "chchangepublic=2&id="+id+"";
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{                    
+				}
+			});
+		}
+	});
+	$(document).on("change",".chComments-Public-PR",function(){		
+		var id = $(this).val();
+		if($(this).attr("checked"))
+		{
+			$(this).parent("label").css("color","green");
+			dataString = "chchangepublicpr=1&id="+id+"";
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{                    
+				}
+			});
+		}
+		else
+		{
+			$(this).parent("label").css("color","red");
+			dataString = "chchangepublicpr=2&id="+id+"";
+			$.ajax({            
+				type: "POST",
+				url: "chcomments-admin.php",
+				data:dataString,
+				cache:false,
+				success:function(html)
+				{                    
+				}
+			});
+		}
+	});
+	//delete
+	$(document).on("click",".chComments-Delete",function(){
+		var id = $(this).attr("id");
+		var element = $(this);
+		
+		element.parent("label").css("color","green");
+		
+		dataString = "chdelete=1&id="+id+"";
+		$.ajax({            
+			type: "POST",
+			url: "chcomments-admin.php",
+			data:dataString,
+			cache:false,
+			success:function(html)
+			{
+				element.parent("div").parent("div").parent("span").parent(".posts").fadeOut();
+			}
+		});		
+	});
+});
+});
